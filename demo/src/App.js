@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 
+//基础知识点版本：
 // import Store from './store_base/store'
 // import Change from './store_base/change'
 
@@ -26,15 +27,27 @@ import React,{Component} from 'react';
     
 //   }
 // }
-import ShowNum from './num/showNum'
-import ChangeNum from './num/changeNum'
-function App(){
-  return(
-    <div>
-      <ShowNum></ShowNum>
-      <ChangeNum></ChangeNum>
-    </div>
-  )
+
+//改数，改名字版本：
+// import ShowNum from './num/showNum'
+// import ChangeNum from './num/changeNum'
+// function App(){
+//   return(
+//     <div>
+//       <ShowNum></ShowNum>
+//       <ChangeNum></ChangeNum>
+//     </div>
+//   )
+
+//todolist 版本
+  import Box from './todolist/box'
+  function App(){
+    return(
+      <div>
+        <Box></Box>
+        
+      </div>
+    )
 }
 
 
