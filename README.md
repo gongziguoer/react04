@@ -25,3 +25,37 @@ Store：一个集结点
            dispatch  提交数据
            subscribe  数据监听进行触发
 
+#####  react-redux
+优化：
+1.减少 store 的引用次数
+    步骤：index.js 里面引入2个文件
+    
+    ```js
+    a:  
+        import Store from './store/store'   
+        import {Provider} from 'react-redux'
+        import * as serviceWorker from './serviceWorker';
+            
+        ReactDOM.render(
+        <Provider store={Store}>
+            <App />
+        </Provider>
+        , document.getElementById('root'));
+    b:
+        在要使用全局状态值的地方 引入connect 处理组件
+        ```
+        import {connect} from 'react-redux'
+        export default connect(state=>state,(dispatch)=>{})(要处理的组件)
+        ```
+
+
+    a.mapStateToProps
+    b.mapDispatchToProps
+
+2.直接没有 subscribe 的使用次数
+    外面包裹的组件,有一个subscribe 来监听，只要被 connect 处理过组件自动获取监听的
+3.减少 getState 的使用次数
+4.减少 dispatch 的使用次数
+    
+
+

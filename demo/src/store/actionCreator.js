@@ -1,17 +1,17 @@
-import Store from './store'
+//import Store from './store'  就不需要引入store了
 export default{
+    //优化为从原来的2件事  创建action  提交----》变为只创建action
     changeNum(){
-        //创建action
         let action={
             type:'CHANGE_NUM'
         }
-        Store.dispatch(action)
+        return action
     },
-    changeName(params){
-        let action={
-            type:'CHANGE_NAME',
-            params:params
-        }
-        Store.dispatch(action) 
-    }
-}
+   hehe(){
+
+   },
+   xixi(){
+       
+   }
+
+   }
